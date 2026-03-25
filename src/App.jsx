@@ -404,7 +404,7 @@ function App() {
                   <div className="timeline-dot"></div>
                   <div className="timeline-content">
                     <span className="timeline-date">Apr 2021 - Mar 2022</span>
-                    <h3>Higher Secondary</h3>
+                    <h3>Burdwan Municipal High School</h3>
                     <p className="highlight">Score: 85%</p>
                   </div>
                 </FadeIn>
@@ -412,7 +412,7 @@ function App() {
                   <div className="timeline-dot"></div>
                   <div className="timeline-content">
                     <span className="timeline-date">Apr 2019 - Mar 2020</span>
-                    <h3>Matriculation</h3>
+                    <h3>Delhi Public School</h3>
                     <p className="highlight">Score: 91%</p>
                   </div>
                 </FadeIn>

@@ -195,7 +195,7 @@ function App() {
                   initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5, duration: 1 }}
                   className="hero-desc"
                 >
-                  <strong style={{ display: 'block', fontSize: '1.4rem', color: 'var(--text-dark)', marginBottom: '0.5rem', textTransform: 'none', whiteSpace: 'nowrap' }}>Turning Data into Insights & Real-World Solutions</strong>
+                  <strong className="hero-tagline" style={{ display: 'block', fontSize: '1.4rem', color: 'var(--text-dark)', marginBottom: '0.5rem', textTransform: 'none' }}>Turning Data into Insights & Real-World Solutions</strong>
                   Building data-driven applications using analytics, machine learning, and modern web technologies to solve real-world problems.
                 </motion.div>
                 <motion.div
@@ -221,10 +221,11 @@ function App() {
                   initial={{ opacity: 0, scale: 0.8, y: 20 }}
                   animate={{ opacity: 1, scale: 1, y: 0 }}
                   transition={{ duration: 1.2, delay: 0.4, ease: [0.25, 1, 0.5, 1] }}
+                  className="hero-image-wrap"
                   style={{ position: 'relative', width: '100%', padding: '2rem' }}
                 >
                   <div style={{ position: 'absolute', inset: '10%', background: 'var(--primary-blue)', filter: 'blur(80px)', opacity: 0.4, zIndex: -1, borderRadius: '50%' }}></div>
-                  <img src="/kailash.jpg" alt="Kailash Agarwal" style={{ width: '100%', maxWidth: '400px', height: '500px', display: 'block', margin: '0 auto', objectFit: 'cover', borderRadius: '40px', border: '5px solid rgba(255,255,255,0.1)', boxShadow: '0 30px 60px -15px rgba(0, 0, 0, 0.4)' }} />
+                  <img src="/kailash.jpg" alt="Kailash Agarwal" className="hero-image" style={{ width: '100%', maxWidth: '400px', height: '500px', display: 'block', margin: '0 auto', objectFit: 'cover', borderRadius: '40px', border: '5px solid rgba(255,255,255,0.1)', boxShadow: '0 30px 60px -15px rgba(0, 0, 0, 0.4)' }} />
                 </motion.div>
               </Tilt>
             </div>
@@ -232,12 +233,12 @@ function App() {
         </section>
 
         {/* Marquee Divider */}
-        <div style={{ background: 'var(--primary-blue)', color: 'var(--bg-white)', padding: '1.5rem 0', transform: 'rotate(-2deg)', margin: '4rem -2rem', width: 'calc(100% + 4rem)', overflow: 'hidden' }}>
+        <div className="angled-marquee" style={{ background: 'var(--primary-blue)', color: 'var(--bg-white)', padding: '1.5rem 0', transform: 'rotate(-2deg)', margin: '4rem -2rem', width: 'calc(100% + 4rem)', overflow: 'hidden' }}>
           <Marquee speed={80} gradient={false}>
-            <span style={{ fontSize: '1.5rem', fontWeight: '800', margin: '0 2rem', textTransform: 'uppercase' }}>Data Science & Analytics</span> •
-            <span style={{ fontSize: '1.5rem', fontWeight: '800', margin: '0 2rem', textTransform: 'uppercase' }}>Machine Learning</span> •
-            <span style={{ fontSize: '1.5rem', fontWeight: '800', margin: '0 2rem', textTransform: 'uppercase' }}>Statistical Modeling</span> •
-            <span style={{ fontSize: '1.5rem', fontWeight: '800', margin: '0 2rem', textTransform: 'uppercase' }}>Visual Intelligence</span> •
+            <span className="marquee-chip" style={{ fontSize: '1.5rem', fontWeight: '800', margin: '0 2rem', textTransform: 'uppercase' }}>Data Science & Analytics</span> •
+            <span className="marquee-chip" style={{ fontSize: '1.5rem', fontWeight: '800', margin: '0 2rem', textTransform: 'uppercase' }}>Machine Learning</span> •
+            <span className="marquee-chip" style={{ fontSize: '1.5rem', fontWeight: '800', margin: '0 2rem', textTransform: 'uppercase' }}>Statistical Modeling</span> •
+            <span className="marquee-chip" style={{ fontSize: '1.5rem', fontWeight: '800', margin: '0 2rem', textTransform: 'uppercase' }}>Visual Intelligence</span> •
           </Marquee>
         </div>
 
@@ -248,22 +249,22 @@ function App() {
             <div className="about-content" style={{ maxWidth: '900px', margin: '0 auto' }}>
               <div className="about-text-container" style={{ display: 'flex', flexDirection: 'column', gap: '2rem', textAlign: 'center' }}>
                 <FadeIn delay={0.2}>
-                  <p style={{ fontSize: '1.4rem', lineHeight: '1.8', color: 'var(--text-dark)', fontWeight: '500' }}>
+                  <p className="about-lead" style={{ fontSize: '1.4rem', lineHeight: '1.8', color: 'var(--text-dark)', fontWeight: '500' }}>
                     I am a Computer Science Engineer passionate about solving real-world problems through technology.
                   </p>
                 </FadeIn>
                 <FadeIn delay={0.3}>
-                  <p style={{ fontSize: '1.4rem', lineHeight: '1.8', color: 'var(--text-dark)', fontWeight: '500' }}>
+                  <p className="about-lead" style={{ fontSize: '1.4rem', lineHeight: '1.8', color: 'var(--text-dark)', fontWeight: '500' }}>
                     My core interests lie in data analytics and machine learning, where I build data-driven solutions and predictive models to extract meaningful insights. Alongside this, I develop scalable web applications to bring these solutions to life.
                   </p>
                 </FadeIn>
                 <FadeIn delay={0.4}>
-                  <p style={{ fontSize: '1.4rem', lineHeight: '1.8', color: 'var(--text-dark)', fontWeight: '500' }}>
+                  <p className="about-lead" style={{ fontSize: '1.4rem', lineHeight: '1.8', color: 'var(--text-dark)', fontWeight: '500' }}>
                     With a strong foundation in C++, Python, JavaScript, and SQL, I have worked on projects ranging from interactive dashboards to end-to-end machine learning pipelines focused on performance, clarity, and real impact.
                   </p>
                 </FadeIn>
                 <FadeIn delay={0.5}>
-                  <p style={{ fontSize: '1.4rem', lineHeight: '1.8', color: 'var(--text-dark)', fontWeight: '500' }}>
+                  <p className="about-lead" style={{ fontSize: '1.4rem', lineHeight: '1.8', color: 'var(--text-dark)', fontWeight: '500' }}>
                     I am driven by curiosity, continuous learning, and the goal of building technology that truly makes a difference.
                   </p>
                 </FadeIn>
@@ -575,13 +576,13 @@ function App() {
         </section>
 
         {/* Footer Marquee */}
-        <div style={{ background: 'var(--text-dark)', color: 'var(--primary-blue)', padding: '1rem 0', width: '100%', overflow: 'hidden', borderTop: '1px solid var(--border-dark)' }}>
+        <div className="footer-marquee" style={{ background: 'var(--text-dark)', color: 'var(--primary-blue)', padding: '1rem 0', width: '100%', overflow: 'hidden', borderTop: '1px solid var(--border-dark)' }}>
           <Marquee speed={60} gradient={false} direction="right">
-            <span style={{ fontSize: '1.2rem', fontWeight: '800', margin: '0 2rem', textTransform: 'uppercase' }}>Available For Freelance</span> ∾
-            <span style={{ fontSize: '1.2rem', fontWeight: '800', margin: '0 2rem', textTransform: 'uppercase' }}>Let's Build Something Amazing</span> ∾
-            <span style={{ fontSize: '1.2rem', fontWeight: '800', margin: '0 2rem', textTransform: 'uppercase' }}>Open To Opportunities</span> ∾
-            <span style={{ fontSize: '1.2rem', fontWeight: '800', margin: '0 2rem', textTransform: 'uppercase' }}>Creative Problem Solving</span> ∾
-            <span style={{ fontSize: '1.2rem', fontWeight: '800', margin: '0 2rem', textTransform: 'uppercase' }}>Always Learning</span> ∾
+            <span className="footer-marquee-chip" style={{ fontSize: '1.2rem', fontWeight: '800', margin: '0 2rem', textTransform: 'uppercase' }}>Available For Freelance</span> ∾
+            <span className="footer-marquee-chip" style={{ fontSize: '1.2rem', fontWeight: '800', margin: '0 2rem', textTransform: 'uppercase' }}>Let's Build Something Amazing</span> ∾
+            <span className="footer-marquee-chip" style={{ fontSize: '1.2rem', fontWeight: '800', margin: '0 2rem', textTransform: 'uppercase' }}>Open To Opportunities</span> ∾
+            <span className="footer-marquee-chip" style={{ fontSize: '1.2rem', fontWeight: '800', margin: '0 2rem', textTransform: 'uppercase' }}>Creative Problem Solving</span> ∾
+            <span className="footer-marquee-chip" style={{ fontSize: '1.2rem', fontWeight: '800', margin: '0 2rem', textTransform: 'uppercase' }}>Always Learning</span> ∾
           </Marquee>
         </div>
       </main>

@@ -465,7 +465,7 @@ function App() {
                 <FadeIn delay={0.2} className="timeline-item">
                   <div className="timeline-dot"></div>
                   <div className="timeline-content">
-                    <span className="timeline-date">Apr 2018 - Mar 2020</span>
+                    <span className="timeline-date">Apr 2020 - Mar 2022</span>
                     <h3>Delhi Public School (Intermediate)</h3>
                     <p style={{ color: 'var(--text-light)', opacity: 0.8 }}>Digboi, Assam</p>
                     <p className="highlight">Percentage: 71.4</p>
@@ -474,7 +474,7 @@ function App() {
                 <FadeIn delay={0.3} className="timeline-item">
                   <div className="timeline-dot"></div>
                   <div className="timeline-content">
-                    <span className="timeline-date">Apr 2017 - Mar 2018</span>
+                    <span className="timeline-date">Apr 2019 - Mar 2020</span>
                     <h3>Delhi Public School (Matriculation)</h3>
                     <p style={{ color: 'var(--text-light)', opacity: 0.8 }}>Digboi, Assam</p>
                     <p className="highlight">Percentage: 84</p>

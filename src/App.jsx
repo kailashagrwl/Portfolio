@@ -119,16 +119,16 @@ function App() {
   useEffect(() => {
     const fetchGithubData = async () => {
       try {
-        const response = await axios.get('https://api.github.com/users/ayushman3004');
+        const response = await axios.get('https://api.github.com/users/kailashagrwl');
         setGithubData(response.data);
       } catch (error) {
         console.error("Error fetching GitHub data:", error);
         // Fallback data if GitHub API rate limit is exceeded
         setGithubData({
-          public_repos: "25+",
-          followers: "5+",
-          following: "7+",
-          html_url: "https://github.com/ayushman3004"
+          public_repos: "5+",
+          followers: "1+",
+          following: "1+",
+          html_url: "https://github.com/kailashagrwl"
         });
       }
     };
@@ -143,12 +143,12 @@ function App() {
       {/* Navbar */}
       <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
         <div className="nav-content">
-          <a href="#" className="logo" onClick={closeMenu}>AB</a>
+          <a href="#" className="logo" onClick={closeMenu}>KA</a>
           <div className="nav-links">
             <a href="#about" className="nav-link">About</a>
             <a href="#skills" className="nav-link">Skills</a>
             <a href="#projects" className="nav-link">Projects</a>
-            <a href="#experience" className="nav-link">Experience</a>
+            <a href="#training" className="nav-link">Training</a>
             <a href="#education" className="nav-link">Education</a>
             <a href="#contact" className="nav-link">Contact</a>
           </div>
@@ -160,7 +160,7 @@ function App() {
           <a href="#about" className="mobile-link" onClick={closeMenu}>About</a>
           <a href="#skills" className="mobile-link" onClick={closeMenu}>Skills</a>
           <a href="#projects" className="mobile-link" onClick={closeMenu}>Projects</a>
-          <a href="#experience" className="mobile-link" onClick={closeMenu}>Experience</a>
+          <a href="#training" className="mobile-link" onClick={closeMenu}>Training</a>
           <a href="#education" className="mobile-link" onClick={closeMenu}>Education</a>
           <a href="#contact" className="mobile-link" onClick={closeMenu}>Contact</a>
         </div>
@@ -182,48 +182,49 @@ function App() {
                   transition={{ duration: 1, ease: [0.25, 1, 0.5, 1] }}
                   className="hero-title"
                 >
-                  AYUSHMAN<br /><span className="gradient-text">BHATTACHARYA</span>
+                  KAILASH<br /><span className="gradient-text">AGARWAL</span>
                 </motion.h1>
                 <motion.h2
                   initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3, duration: 1 }}
                   className="hero-subtitle"
                 >
-                  <Typewriter words={["Full Stack Developer", "AI Enthusiast", "Problem Solver"]} />
+                  <Typewriter words={["Data Analyst", "Software Developer"]} />
                   <span className="cursor">|</span>
                 </motion.h2>
-                <motion.p
+                <motion.div
                   initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5, duration: 1 }}
                   className="hero-desc"
                 >
-                  Passionate about building scalable web applications and AI-driven solutions with modern, minimal design principles.
-                </motion.p>
+                  <strong style={{ display: 'block', fontSize: '1.4rem', color: 'var(--text-dark)', marginBottom: '0.5rem', textTransform: 'none', whiteSpace: 'nowrap' }}>Turning Data into Insights & Real-World Solutions</strong>
+                  Building data-driven applications using analytics, machine learning, and modern web technologies to solve real-world problems.
+                </motion.div>
                 <motion.div
                   initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7, duration: 1 }}
                   className="hero-cta"
                 >
                   <a href="#projects" className="btn btn-primary">View Projects</a>
-                  <a href="/AyushmanCV.docx" download className="btn btn-outline"><i className="fas fa-download"></i> Resume</a>
+                  <a href="/Kailash_Resume.docx" download className="btn btn-outline"><i className="fas fa-download"></i> Resume</a>
                   <a href="#contact" className="btn btn-outline">Contact Me</a>
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.9, duration: 1 }}
                   className="social-links"
                 >
-                  <a href="https://github.com/ayushman3004" target="_blank" rel="noreferrer"><i className="fab fa-github"></i></a>
-                  <a href="https://www.linkedin.com/in/ayushman30" target="_blank" rel="noreferrer"><i className="fab fa-linkedin"></i></a>
-                  <a href="mailto:ayushman.rick007@gmail.com"><i className="fas fa-envelope"></i></a>
+                  <a href="https://github.com/kailashagrwl" target="_blank" rel="noreferrer"><i className="fab fa-github"></i></a>
+                  <a href="https://www.linkedin.com/in/kailash-agarwal47/" target="_blank" rel="noreferrer"><i className="fab fa-linkedin"></i></a>
+                  <a href="mailto:kailashagarwal957@gmail.com"><i className="fas fa-envelope"></i></a>
                 </motion.div>
               </div>
-              
+
               <Tilt tiltMaxAngleX={5} tiltMaxAngleY={5} glareEnable={true} glareMaxOpacity={0.1} glarePosition="all" style={{ zIndex: 10, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <motion.div
-                  initial={{ opacity: 0, scale: 0.8, y: 20 }} 
-                  animate={{ opacity: 1, scale: 1, y: 0 }} 
+                  initial={{ opacity: 0, scale: 0.8, y: 20 }}
+                  animate={{ opacity: 1, scale: 1, y: 0 }}
                   transition={{ duration: 1.2, delay: 0.4, ease: [0.25, 1, 0.5, 1] }}
                   style={{ position: 'relative', width: '100%', padding: '2rem' }}
                 >
                   <div style={{ position: 'absolute', inset: '10%', background: 'var(--primary-blue)', filter: 'blur(80px)', opacity: 0.4, zIndex: -1, borderRadius: '50%' }}></div>
-                  <img src="https://img.freepik.com/premium-vector/illustration-web-development-programmer-coding-website_746655-2851.jpg?semt=ais_hybrid&w=740&q=80" alt="Ayushman Bhattacharya" style={{ width: '100%', maxWidth: '450px', height: 'auto', display: 'block', margin: '0 auto', objectFit: 'cover', borderRadius: '40px', border: '1px solid rgba(0,0,0,0.05)', boxShadow: '0 30px 60px -15px rgba(0, 0, 0, 0.25)' }} />
+                  <img src="/kailash.jpg" alt="Kailash Agarwal" style={{ width: '100%', maxWidth: '400px', height: '500px', display: 'block', margin: '0 auto', objectFit: 'cover', borderRadius: '40px', border: '5px solid rgba(255,255,255,0.1)', boxShadow: '0 30px 60px -15px rgba(0, 0, 0, 0.4)' }} />
                 </motion.div>
               </Tilt>
             </div>
@@ -233,11 +234,10 @@ function App() {
         {/* Marquee Divider */}
         <div style={{ background: 'var(--primary-blue)', color: 'var(--bg-white)', padding: '1.5rem 0', transform: 'rotate(-2deg)', margin: '4rem -2rem', width: 'calc(100% + 4rem)', overflow: 'hidden' }}>
           <Marquee speed={80} gradient={false}>
-            <span style={{ fontSize: '1.5rem', fontWeight: '800', margin: '0 2rem', textTransform: 'uppercase' }}>Building The Future</span> •
-            <span style={{ fontSize: '1.5rem', fontWeight: '800', margin: '0 2rem', textTransform: 'uppercase' }}>Scalable Modern Web</span> •
-            <span style={{ fontSize: '1.5rem', fontWeight: '800', margin: '0 2rem', textTransform: 'uppercase' }}>AI-Driven Applications</span> •
-            <span style={{ fontSize: '1.5rem', fontWeight: '800', margin: '0 2rem', textTransform: 'uppercase' }}>Full Stack Expertise</span> •
-            <span style={{ fontSize: '1.5rem', fontWeight: '800', margin: '0 2rem', textTransform: 'uppercase' }}>Creative Interfaces</span> •
+            <span style={{ fontSize: '1.5rem', fontWeight: '800', margin: '0 2rem', textTransform: 'uppercase' }}>Data Science & Analytics</span> •
+            <span style={{ fontSize: '1.5rem', fontWeight: '800', margin: '0 2rem', textTransform: 'uppercase' }}>Machine Learning</span> •
+            <span style={{ fontSize: '1.5rem', fontWeight: '800', margin: '0 2rem', textTransform: 'uppercase' }}>Statistical Modeling</span> •
+            <span style={{ fontSize: '1.5rem', fontWeight: '800', margin: '0 2rem', textTransform: 'uppercase' }}>Visual Intelligence</span> •
           </Marquee>
         </div>
 
@@ -245,18 +245,29 @@ function App() {
         <section id="about" className="section section-light">
           <div className="container">
             <FadeIn><h2 className="section-title">ABOUT <span className="gradient-text">ME</span></h2></FadeIn>
-            <div className="about-grid">
-              <TiltCard delay={0.1} className="about-card">
-                <div className="about-icon"><i className="fas fa-user-graduate"></i></div>
-                <h3>B.Tech CSE Student</h3>
-                <p>Lovely Professional University</p>
-                <p className="highlight" style={{ marginTop: '0.5rem' }}>CGPA: 7.53</p>
-              </TiltCard>
-              <TiltCard delay={0.2} className="about-card">
-                <div className="about-icon"><i className="fas fa-laptop-code"></i></div>
-                <h3>Passionate Developer</h3>
-                <p>Strong interest in full-stack development and AI-based applications. Driven by a problem-solving mindset and continuous learning.</p>
-              </TiltCard>
+            <div className="about-content" style={{ maxWidth: '900px', margin: '0 auto' }}>
+              <div className="about-text-container" style={{ display: 'flex', flexDirection: 'column', gap: '2rem', textAlign: 'center' }}>
+                <FadeIn delay={0.2}>
+                  <p style={{ fontSize: '1.4rem', lineHeight: '1.8', color: 'var(--text-dark)', fontWeight: '500' }}>
+                    I am a Computer Science Engineer passionate about solving real-world problems through technology.
+                  </p>
+                </FadeIn>
+                <FadeIn delay={0.3}>
+                  <p style={{ fontSize: '1.4rem', lineHeight: '1.8', color: 'var(--text-dark)', fontWeight: '500' }}>
+                    My core interests lie in data analytics and machine learning, where I build data-driven solutions and predictive models to extract meaningful insights. Alongside this, I develop scalable web applications to bring these solutions to life.
+                  </p>
+                </FadeIn>
+                <FadeIn delay={0.4}>
+                  <p style={{ fontSize: '1.4rem', lineHeight: '1.8', color: 'var(--text-dark)', fontWeight: '500' }}>
+                    With a strong foundation in C++, Python, JavaScript, and SQL, I have worked on projects ranging from interactive dashboards to end-to-end machine learning pipelines focused on performance, clarity, and real impact.
+                  </p>
+                </FadeIn>
+                <FadeIn delay={0.5}>
+                  <p style={{ fontSize: '1.4rem', lineHeight: '1.8', color: 'var(--text-dark)', fontWeight: '500' }}>
+                    I am driven by curiosity, continuous learning, and the goal of building technology that truly makes a difference.
+                  </p>
+                </FadeIn>
+              </div>
             </div>
           </div>
         </section>
@@ -267,27 +278,31 @@ function App() {
             <FadeIn><h2 className="section-title">MY <span className="gradient-text">SKILLS</span></h2></FadeIn>
             <div className="skills-grid">
               <TiltCard delay={0.1} className="skill-category">
-                <h3><i className="fas fa-code"></i> Languages</h3>
+                <div className="stat-icon" style={{ background: 'rgba(28, 118, 255, 0.1)', color: 'var(--primary-blue)', margin: '0 0 1.5rem 0' }}><i className="fas fa-code"></i></div>
+                <h3>LANGUAGES</h3>
                 <div className="skill-tags">
-                  <span>JavaScript</span><span>Python</span><span>C++</span><span>Java</span>
+                  <span>C++</span><span>C</span><span>Python</span><span>SQL</span><span>JavaScript</span>
+                </div>
+              </TiltCard>
+              <TiltCard delay={0.15} className="skill-category">
+                <div className="stat-icon" style={{ background: 'rgba(56, 189, 248, 0.1)', color: '#38bdf8', margin: '0 0 1.5rem 0' }}><i className="fas fa-desktop"></i></div>
+                <h3>FRONTEND</h3>
+                <div className="skill-tags">
+                  <span>HTML5</span><span>CSS3</span><span>Responsive Web Design</span>
                 </div>
               </TiltCard>
               <TiltCard delay={0.2} className="skill-category">
-                <h3><i className="fas fa-layer-group"></i> Frameworks</h3>
+                <div className="stat-icon" style={{ background: 'rgba(139, 92, 246, 0.1)', color: '#8b5cf6', margin: '0 0 1.5rem 0' }}><i className="fas fa-microchip"></i></div>
+                <h3>FRAMEWORKS & ML</h3>
                 <div className="skill-tags">
-                  <span>ReactJs</span><span>NextJs</span><span>NodeJs</span><span>ExpressJs</span><span>Mongoose</span>
+                  <span>NumPy</span><span>Pandas</span><span>Scikit-Learn</span><span>Matplotlib</span><span>Seaborn</span>
                 </div>
               </TiltCard>
               <TiltCard delay={0.3} className="skill-category">
-                <h3><i className="fas fa-database"></i> Tools</h3>
+                <div className="stat-icon" style={{ background: 'rgba(20, 184, 166, 0.1)', color: '#14b8a6', margin: '0 0 1.5rem 0' }}><i className="fas fa-tools"></i></div>
+                <h3>TOOLS & PLATFORMS</h3>
                 <div className="skill-tags">
-                  <span>MongoDB</span><span>MySQL</span><span>Postman</span><span>Git</span><span>Vercel</span>
-                </div>
-              </TiltCard>
-              <TiltCard delay={0.4} className="skill-category">
-                <h3><i className="fas fa-users"></i> Soft Skills</h3>
-                <div className="skill-tags">
-                  <span>Problem-solving</span><span>Team Leader</span><span>Adaptability</span>
+                  <span>Power BI</span><span>MS Excel</span><span>MySQL</span><span>Jupyter Notebook</span><span>VS Code</span><span>Vercel</span>
                 </div>
               </TiltCard>
             </div>
@@ -301,23 +316,32 @@ function App() {
             <div className="projects-grid">
               <TiltCard delay={0.1} className="project-card">
                 <div className="project-tags">
-                  <span>NextJs</span><span>TypeScript</span><span>OpenAI</span><span>Tailwind</span>
+                  <span>HTML</span><span>CSS</span><span>JavaScript</span>
                 </div>
-                <h3>Random Anonymous Feedback Generator</h3>
-                <p>Built an AI-driven web app linking OpenAI and Google AI SDKs to summarize, classify, and interpret user feedback. Secured the UI with Radix UI, React Hook Form, and Zod while ensuring performance via Turbopack and React Email verification.</p>
+                <h3>Smart Study Planner</h3>
+                <p>Developed a responsive Smart Study Planner with an integrated dashboard to manage subjects, scheduling, task tracking, and performance analytics. Implemented browser-based local storage for persistent state management, ensuring seamless task continuity.</p>
                 <div className="project-links">
-                  <a href="https://github.com/ayushman3004/Feedback_generator" className="btn btn-outline btn-sm"><i className="fab fa-github"></i> GitHub</a>
+                  <a href="https://github.com/kailashagrwl/Smart-Study-Planner" target="_blank" rel="noreferrer" className="btn btn-outline btn-sm"><i className="fab fa-github"></i> GitHub</a>
                 </div>
               </TiltCard>
               <TiltCard delay={0.2} className="project-card">
                 <div className="project-tags">
-                  <span>PHP</span><span>MySQL</span><span>OpenCV</span><span>PyTorch</span>
+                  <span>Power BI</span><span>DAX</span><span>Power Query</span>
                 </div>
-                <h3>Water Monitoring System</h3>
-                <p>Developed an AI-powered portal for analyzing water pollution with manual inputs and image detection. The full-stack pipeline integrates OpenCV–PyTorch to run feature extraction, providing automated comparative insights in real time.</p>
+                <h3>Healthcare Analytics Dashboard</h3>
+                <p>Built an interactive healthcare analytics dashboard to analyze patient demographics, hospital admissions, billing trends, and diagnostic outcomes. Applied star schema data modeling and created DAX measures to track key metrics.</p>
                 <div className="project-links">
-                  <a href="https://github.com/ayushman3004/Water_Monitoring_System" className="btn btn-outline btn-sm"><i className="fab fa-github"></i> GitHub</a>
-                  <a href="https://www.waterwatch.consulting" className="btn btn-primary btn-sm"><i className="fas fa-external-link-alt"></i> Live Demo</a>
+                  <a href="https://github.com/kailashagrwl/HealthCare-Analytics" target="_blank" rel="noreferrer" className="btn btn-outline btn-sm"><i className="fab fa-github"></i> GitHub</a>
+                </div>
+              </TiltCard>
+              <TiltCard delay={0.3} className="project-card">
+                <div className="project-tags">
+                  <span>Python</span><span>NumPy</span><span>Pandas</span><span>Scikit-Learn</span>
+                </div>
+                <h3>E-Commerce Sales Prediction</h3>
+                <p>Built a predictive machine learning pipeline to forecast future e-commerce sales using historic datasets. Cleaned, preprocessed, and engineered data features to deliver an accurate sales-forecasting model with visual insights.</p>
+                <div className="project-links">
+                  <a href="https://github.com/kailashagrwl/E-Commerce-Sales-Prediction" target="_blank" rel="noreferrer" className="btn btn-outline btn-sm"><i className="fab fa-github"></i> GitHub</a>
                 </div>
               </TiltCard>
             </div>
@@ -325,20 +349,21 @@ function App() {
         </section>
 
         {/* Experience Section */}
-        <section id="experience" className="section section-dark">
+        <section id="training" className="section section-dark">
           <div className="container">
-            <FadeIn><h2 className="section-title">INTERNSHIP & <span className="gradient-text">EXPERIENCE</span></h2></FadeIn>
+            <FadeIn><h2 className="section-title">SUMMER <span className="gradient-text">TRAINING</span></h2></FadeIn>
             <div className="timeline">
               <FadeIn delay={0.1} className="timeline-item">
                 <div className="timeline-dot"></div>
                 <div className="timeline-content">
-                  <span className="timeline-date">Past</span>
-                  <h3>Frontend Developer Intern</h3>
-                  <h4 className="gradient-text">Kirijo (www.kirijo.com)</h4>
+                  <span className="timeline-date">Jun 25 - Jul 25</span>
+                  <h3>Data Structure and Algorithm</h3>
+                  <h4 className="gradient-text">Intensive Summer Program</h4>
                   <ul>
-                    <li>Developed modular frontend components using React, improving performance through lazy loading.</li>
-                    <li>Collaborated remotely with backend and design teams to integrate APIs, handle asynchronous data, and ensure smooth UX.</li>
-                    <li>Enhanced user experience by optimizing routing and reducing bundle size.</li>
+                    <li>Completed an intensive summer training program focused on core Data Structures and Algorithms.</li>
+                    <li>Practiced implementing essential data structures like arrays, stacks, queues, trees, graphs, and hash maps.</li>
+                    <li>Enhanced ability to write efficient, optimized code using time-space complexity analysis.</li>
+                    <li>Tech: Python</li>
                   </ul>
                 </div>
               </FadeIn>
@@ -353,10 +378,36 @@ function App() {
               <FadeIn delay={0.1}>
                 <h2 className="section-title" style={{ textAlign: 'left' }}><span className="gradient-text">CERTIFICATIONS</span></h2>
                 <ul className="fancy-list">
-                  <li><i className="fas fa-award"></i><div><strong><a href="https://www.udemy.com/certificate/UC-cebcc3ec-2d2b-49e1-9a7a-a9f68aecb853/" target="_blank" rel="noreferrer" style={{ color: 'inherit', textDecoration: 'none', transition: 'color 0.3s' }} onMouseOver={(e) => e.target.style.color = 'var(--primary-blue)'} onMouseOut={(e) => e.target.style.color = 'inherit'}>PHP Laravel Developer <i className="fas fa-external-link-alt" style={{ fontSize: '0.8rem', marginLeft: '0.3rem' }}></i></a></strong><span>Udemy</span></div></li>
-                  <li><i className="fas fa-award"></i><div><strong><a href="/flutter-cert.pdf" target="_blank" rel="noreferrer" style={{ color: 'inherit', textDecoration: 'none', transition: 'color 0.3s' }} onMouseOver={(e) => e.target.style.color = 'var(--primary-blue)'} onMouseOut={(e) => e.target.style.color = 'inherit'}>Mobile App Development using Flutter <i className="fas fa-external-link-alt" style={{ fontSize: '0.8rem', marginLeft: '0.3rem' }}></i></a></strong><span>CipherSchools (Jun '25)</span></div></li>
-                  <li><i className="fas fa-award"></i><div><strong><a href="/privacy-security-cert.pdf" target="_blank" rel="noreferrer" style={{ color: 'inherit', textDecoration: 'none', transition: 'color 0.3s' }} onMouseOver={(e) => e.target.style.color = 'var(--primary-blue)'} onMouseOut={(e) => e.target.style.color = 'inherit'}>Privacy and Security in social media <i className="fas fa-external-link-alt" style={{ fontSize: '0.8rem', marginLeft: '0.3rem' }}></i></a></strong><span>NPTEL (Jan '25)</span></div></li>
-                  <li><i className="fas fa-award"></i><div><strong><a href="https://www.hackerrank.com/certificates/6d66064296fb" target="_blank" rel="noreferrer" style={{ color: 'inherit', textDecoration: 'none', transition: 'color 0.3s' }} onMouseOver={(e) => e.target.style.color = 'var(--primary-blue)'} onMouseOut={(e) => e.target.style.color = 'inherit'}>Problem Solving Skills <i className="fas fa-external-link-alt" style={{ fontSize: '0.8rem', marginLeft: '0.3rem' }}></i></a></strong><span>Hacker Rank (Nov '23)</span></div></li>
+                  <li>
+                    <i className="fas fa-award"></i>
+                    <div style={{ flex: 1 }}>
+                      <strong>ChatGPT-4 Prompt Engineering: ChatGPT, Generative AI & LLM</strong>
+                      <span>Infosys</span>
+                    </div>
+                    <a href="https://drive.google.com/file/d/1QSqSLA63JXP0vodULO73jhiLpwCpYdY3/view" target="_blank" rel="noreferrer" className="cert-link" title="View Certificate">
+                      <i className="fas fa-external-link-alt"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <i className="fas fa-award"></i>
+                    <div style={{ flex: 1 }}>
+                      <strong>Privacy and Security in online social media</strong>
+                      <span>NPTEL</span>
+                    </div>
+                    <a href="https://drive.google.com/file/u/0/d/1cjzmhrc70ZJsEBM1igCZHdh3Bjkq_8Gt/view?usp=sharing&pli=1" target="_blank" rel="noreferrer" className="cert-link" title="View Certificate">
+                      <i className="fas fa-external-link-alt"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <i className="fas fa-award"></i>
+                    <div style={{ flex: 1 }}>
+                      <strong>Data Structure and Algorithm</strong>
+                      <span>CSE Pathshala</span>
+                    </div>
+                    <a href="https://drive.google.com/file/d/1_mtnIF3BFHOg3jIU6tH3GySN0nsIcmnC/view" target="_blank" rel="noreferrer" className="cert-link" title="View Certificate">
+                      <i className="fas fa-external-link-alt"></i>
+                    </a>
+                  </li>
                 </ul>
               </FadeIn>
               <FadeIn delay={0.2}>
@@ -364,20 +415,30 @@ function App() {
                 <div className="stats-grid">
                   <Tilt tiltMaxAngleX={10} tiltMaxAngleY={10} glareEnable={true} glareMaxOpacity={0.1} glareColor="var(--primary-blue)" style={{ height: '100%' }}>
                     <div className="minimal-card stat-card" style={{ height: '100%' }}>
-                      <div className="stat-number">400+</div>
-                      <div className="stat-label">Coding Problems Solved</div>
+                      <div className="stat-icon" style={{ background: 'rgba(28, 118, 255, 0.1)', color: 'var(--primary-blue)' }}><i className="fas fa-trophy"></i></div>
+                      <div className="stat-number">200+</div>
+                      <div className="stat-label">DSA Problems Solved</div>
                     </div>
                   </Tilt>
-                  <Tilt tiltMaxAngleX={10} tiltMaxAngleY={10} glareEnable={true} glareMaxOpacity={0.1} glareColor="var(--primary-blue)" style={{ height: '100%' }}>
+                  <Tilt tiltMaxAngleX={10} tiltMaxAngleY={10} glareEnable={true} glareMaxOpacity={0.1} glareColor="#8b5cf6" style={{ height: '100%' }}>
                     <div className="minimal-card stat-card" style={{ height: '100%' }}>
-                      <div className="stat-number"><i className="fas fa-star" style={{fontSize:'2.5rem', verticalAlign:'middle', marginRight:'5px'}}></i>5</div>
-                      <div className="stat-label">C++ (HackerRank)</div>
+                      <div className="stat-icon" style={{ background: 'rgba(139, 92, 246, 0.1)', color: '#8b5cf6' }}><i className="fas fa-chart-line"></i></div>
+                      <div className="stat-number">1557</div>
+                      <div className="stat-label">LeetCode Rating</div>
                     </div>
                   </Tilt>
-                  <Tilt tiltMaxAngleX={10} tiltMaxAngleY={10} glareEnable={true} glareMaxOpacity={0.1} glareColor="var(--primary-blue)" style={{ gridColumn: '1 / -1', height: '100%' }}>
+                  <Tilt tiltMaxAngleX={10} tiltMaxAngleY={10} glareEnable={true} glareMaxOpacity={0.1} glareColor="#22c55e" style={{ height: '100%' }}>
                     <div className="minimal-card stat-card" style={{ height: '100%' }}>
-                      <div className="stat-number"><i className="fas fa-star" style={{fontSize:'2.5rem', verticalAlign:'middle', marginRight:'5px'}}></i>4</div>
-                      <div className="stat-label">Python (HackerRank)</div>
+                      <div className="stat-icon" style={{ background: 'rgba(34, 197, 94, 0.1)', color: '#22c55e' }}><i className="fas fa-star"></i></div>
+                      <div className="stat-number">4★</div>
+                      <div className="stat-label">HackerRank C++</div>
+                    </div>
+                  </Tilt>
+                  <Tilt tiltMaxAngleX={10} tiltMaxAngleY={10} glareEnable={true} glareMaxOpacity={0.1} glareColor="#22c55e" style={{ height: '100%' }}>
+                    <div className="minimal-card stat-card" style={{ height: '100%' }}>
+                      <div className="stat-icon" style={{ background: 'rgba(34, 197, 94, 0.1)', color: '#22c55e' }}><i className="fas fa-star"></i></div>
+                      <div className="stat-number">4★</div>
+                      <div className="stat-label">HackerRank SQL</div>
                     </div>
                   </Tilt>
                 </div>
@@ -397,33 +458,36 @@ function App() {
                   <div className="timeline-content">
                     <span className="timeline-date">2023 - Present</span>
                     <h3>B.Tech Computer Science Engineering</h3>
-                    <p style={{color: 'var(--text-light)', opacity: 0.8}}>Lovely Professional University &bull; Punjab, India</p>
+                    <p style={{ color: 'var(--text-light)', opacity: 0.8 }}>Lovely Professional University &bull; Phagwara, India</p>
+                    <p className="highlight">CGPA: 8.25</p>
                   </div>
                 </FadeIn>
                 <FadeIn delay={0.2} className="timeline-item">
                   <div className="timeline-dot"></div>
                   <div className="timeline-content">
-                    <span className="timeline-date">Apr 2021 - Mar 2022</span>
-                    <h3>Burdwan Municipal High School</h3>
-                    <p className="highlight">Score: 85%</p>
+                    <span className="timeline-date">Apr 2020 - Mar 2022</span>
+                    <h3>Delhi Public School (Intermediate)</h3>
+                    <p style={{ color: 'var(--text-light)', opacity: 0.8 }}>Digboi, Assam</p>
+                    <p className="highlight">Percentage: 71.4</p>
                   </div>
                 </FadeIn>
                 <FadeIn delay={0.3} className="timeline-item">
                   <div className="timeline-dot"></div>
                   <div className="timeline-content">
                     <span className="timeline-date">Apr 2019 - Mar 2020</span>
-                    <h3>Delhi Public School</h3>
-                    <p className="highlight">Score: 91%</p>
+                    <h3>Delhi Public School (Matriculation)</h3>
+                    <p style={{ color: 'var(--text-light)', opacity: 0.8 }}>Digboi, Assam</p>
+                    <p className="highlight">Percentage: 84</p>
                   </div>
                 </FadeIn>
               </div>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem', alignSelf: 'start' }}>
                 <TiltCard delay={0.3} className="comp-card">
                   <h3><i className="fas fa-trophy"></i> Competitive Programming</h3>
                   <p>Active participant in competitive programming platforms, continuously refining problem-solving skills and algorithmic thinking.</p>
                   <div className="cp-links">
-                    <a href="https://codolio.com/profile/AyushMan" target="_blank" rel="noreferrer" className="btn btn-outline btn-sm">Codolio</a>
-                    <a href="https://leetcode.com/u/__Ayush__30__/" target="_blank" rel="noreferrer" className="btn btn-outline btn-sm">LeetCode</a>
+                    <a href="https://leetcode.com/u/kailashagrwl/" target="_blank" rel="noreferrer" className="btn btn-outline btn-sm">LeetCode</a>
+                    <a href="https://www.hackerrank.com/profile/kailashagarwal91" target="_blank" rel="noreferrer" className="btn btn-outline btn-sm">HackerRank</a>
                   </div>
                 </TiltCard>
 
@@ -461,24 +525,31 @@ function App() {
           <div className="container">
             <FadeIn><h2 className="section-title">GET IN <span className="gradient-text">TOUCH</span></h2></FadeIn>
             <div className="contact-container">
-              <FadeIn delay={0.1} className="minimal-card contact-info" style={{background: 'transparent', border: 'none', padding: 0}}>
+              <FadeIn delay={0.1} className="minimal-card contact-info" style={{ background: 'transparent', border: 'none', padding: 0 }}>
                 <h3>Let's start a project together</h3>
                 <p>Feel free to reach out for collaborations or just a friendly hello. I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.</p>
                 <div className="contact-methods">
-                  <a href="mailto:ayushman.rick007@gmail.com" className="contact-method">
+                  <a href="mailto:kailashagarwal957@gmail.com" className="contact-method">
                     <div className="cm-icon"><i className="fas fa-envelope"></i></div>
                     <div>
                       <h4>Email</h4>
-                      <span>ayushman.rick007@gmail.com</span>
+                      <span>kailashagarwal957@gmail.com</span>
                     </div>
                   </a>
-                  <a href="tel:+918167394620" className="contact-method">
+                  <a href="tel:+919707026697" className="contact-method">
                     <div className="cm-icon"><i className="fas fa-phone"></i></div>
                     <div>
                       <h4>Phone</h4>
-                      <span>+91-8167394620</span>
+                      <span>+91-9707026697</span>
                     </div>
                   </a>
+                  <div className="contact-method">
+                    <div className="cm-icon"><i className="fas fa-map-marker-alt"></i></div>
+                    <div>
+                      <h4>Location</h4>
+                      <span>Tinsukia, Assam</span>
+                    </div>
+                  </div>
                 </div>
               </FadeIn>
               <TiltCard delay={0.2} className="contact-form-container">
@@ -517,10 +588,10 @@ function App() {
 
       <footer>
         <div className="container footer-content">
-          <p>&copy; {new Date().getFullYear()} Ayushman Bhattacharya. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Kailash Agarwal. All rights reserved.</p>
           <div className="social-links" style={{ display: 'flex', gap: '1rem' }}>
-            <a href="https://github.com/ayushman3004" target="_blank" rel="noreferrer"><i className="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/ayushman30" target="_blank" rel="noreferrer"><i className="fab fa-linkedin"></i></a>
+            <a href="https://github.com/kailashagrwl" target="_blank" rel="noreferrer"><i className="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/kailash-agarwal47/" target="_blank" rel="noreferrer"><i className="fab fa-linkedin"></i></a>
           </div>
         </div>
       </footer>
